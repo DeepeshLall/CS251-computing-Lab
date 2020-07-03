@@ -1,0 +1,4 @@
+library(ggplot2)
+t=read.csv("~/Desktop/CS251MIDSEM/Lab Exam/question/result.csv")
+df<-t
+ggplot(t)+geom_line(aes(x=as.numeric(row.names(df)),y=X0.1),color="red")+geom_line(aes(x=as.numeric(row.names(df)),y=X0),color="blue")+coord_cartesian(xlim=c(0,10),ylim=c(0,25))+labs(title="Sort1 and Sort2 vs n",x="Input(n)",y="time")
